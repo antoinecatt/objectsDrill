@@ -25,13 +25,16 @@ const menu = {
 //console.log(menu.meals[3]);
 
 const people = [
-  {name: 'Antoine', jobTitle: 'Lord of the universe'},
-  {name: 'Rose', jobTitle: 'Overlord of the universe'},
-  {name: 'Kathy', jobTitle: 'Grandma of the universe'},
-  {name: 'Ray', jobTitle: 'Grandpa of the universe'},
+  {name: 'Antoine', jobTitle: 'Lord of the universe', boss : 'Dakota'},
+  {name: 'Rose', jobTitle: 'Overlord of the universe', boss : 'Dakota'},
+  {name: 'Kathy', jobTitle: 'Grandma of the universe', boss : 'Dakota'},
+  {name: 'Ray', jobTitle: 'Grandpa of the universe', boss : 'Dakota'},
   {name: 'Dakota', jobTitle: 'Love of the universe'}
 ];
-
 people.forEach(person => {
-  console.log(`${person.name} is ${person.jobTitle}`);
+  if ( person.boss === 'Dakota') {
+    console.log(`${person.name} ${person.jobTitle} reports to ${person.boss}`);
+  } else
+  { console.log("Boss Dakota doesn't report ot anybody")
+  }
 });
