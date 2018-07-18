@@ -7,4 +7,14 @@ const loaf = {
 };
 console.log(loaf.hydration());
 
+const loopObj = {
+  foo: 'foo',
+  bar: true,
+  fum: 11,
+  quux: () => 'hi',
+  spam: [1,2,3,4,5]
+}
 
+for(let key in loopObj) {
+  console.log(`${key}: ${loopObj[key]}`)
+}
