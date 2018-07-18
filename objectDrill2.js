@@ -104,13 +104,11 @@ function createCharacter(name, nickName, race, origin, attack, defense) {
 let Gandalf = createCharacter('Gandalf the White', 'gandalf', 'Wizard', 'Middle Earth' , 10, 6 );
 console.log(Gandalf.describe());
 
-console.log(code.decode('craft block argon meter bells brown croon droop'));
+let Bilbo = createCharacter('Bilbo Baggins',  'bilbo',  'Hobbit',  'The Shire',  2,  1)
 
-let Bilbo = ('Bilbo Baggins',  'bilbo',  'Hobbit',  'The Shire',  2,  1)
+let Frodo = createCharacter('Frodo Baggins',  'frodo',  'Hobbit',  'The Shire',  3,  2)
 
-let Frodo = ('Frodo Baggins',  'frodo',  'Hobbit',  'The Shire',  3,  2)
+let Aragorn = createCharacter('Aragorn son of Arathorn'   ,  'aragorn',  'Man',  'Dunnedain',  6,  8)
 
-let Aragorn = ('Aragorn son of Arathorn'   ,  'aragorn',  'Man',  'Dunnedain',  6,  8)
-
-let Legolas = ('Legolas',  'legolas',  'Elf',  'Woodland Realm' ,  8,  5)
+let Legolas = createCharacter('Legolas',  'legolas',  'Elf',  'Woodland Realm' ,  8,  5)
 
