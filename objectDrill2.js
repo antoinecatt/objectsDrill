@@ -22,4 +22,4 @@ for(let key in loopObj) {
 const menu = {
   meals: ['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper']
 };
-console.log(menu.meals[3]);
+//console.log(menu.meals[3]);
