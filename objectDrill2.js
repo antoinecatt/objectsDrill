@@ -44,28 +44,33 @@ const code = {
   b: 3,
   c: 4,
   d: 5,
-  codeword: 'craft block argon meter bells brown croon droop',
-  decodedWords: function(string) {
-    let splitStr = string.split(' ');
-      splitStr.forEach(function(str) {
-      switch (string[0]) {
-      case 'a' :
-        return string[1];
-      case 'b' :
-        return string[2];
-      case 'c' :
-        return string[3];
-      case 'd' :
-        return string[4];
-      default :
-        return ' ';
+  decode: function(words) {
+    let decoded = [];
+    // split the sentence into individual words
+    let split = words.split(' ');
+    // loop through each word
+    split.forEach(word => {
+      // store the first character of each word
+      let firstChar = word.charAt(0);
+      // compare the first character of each word to a
+      if(firstChar === 'a') {
+        decoded.push(word[1]);      
+      }
+      // compare the first character of each word to b
+      if(firstChar === 'b') {
+        decoded.push(word[2]);    
+      }
+      // compare the first character of each word to c
+      if(firstChar === 'c') {
+        decoded.push(word[3]);     
+      }
+      // compare the first character of each word to d
+      if(firstChar === 'd') {
+        decoded.push(word[4]);
       }
     });
-    return splitStr;
+    return decoded.join('');
   }
 };
 
-
-
-
-console.log(code.decodedWords(code.codeword));
+console.log(code.decode('craft block argon meter bells brown croon droop'));
