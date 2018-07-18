@@ -34,7 +34,7 @@ const people = [
 people.forEach(person => {
   if ( person.boss === 'Dakota') {
     console.log(`${person.name} ${person.jobTitle} reports to ${person.boss}`);
-  } else { 
+  } else {
     console.log('Boss Dakota doesn\'t report ot anybody');
   }
 });
@@ -44,28 +44,68 @@ const code = {
   b: 3,
   c: 4,
   d: 5,
-  codeword: 'craft block argon meter bells brown croon droop',
+}
   decodedWords: function(string) {
     let splitStr = string.split(' ');
       splitStr.forEach(function(str) {
-      switch (string[0]) {
-      case 'a' :
-        return string[1];
-      case 'b' :
-        return string[2];
-      case 'c' :
-        return string[3];
-      case 'd' :
-        return string[4];
-      default :
-        return ' ';
+        splitStr[0] === code[key]
+        // if 1st letter = code.key
+        //then value of the matched key will be the num -1 for index of the character
+        //return the char
+        code.a =
+      // switch (string[0]) {
+      // case 'a' :
+      //   return string[1];
+      // case 'b' :
+      //   return string[2];
+      // case 'c' :
+      //   return string[3];
+      // case 'd' :
+      //   return string[4];
+      // default :
+      //   return ' ';
       }
     });
     return splitStr;
   }
 };
-
+decodedWords('brown');
+//codeword: 'craft block argon meter bells brown croon droop',
 
 
 
 console.log(code.decodedWords(code.codeword));
+function createAnimal(type, size) {
+  const validTypes = ['dog', 'cat'];
+  if (!type || !size) throw new TypeError('Missing required attributes');
+  if (!validTypes.includes(type)) throw new TypeError('Unknown animal type');
+
+  return {
+    type, size,
+    speak: function() {
+      return this.type === 'dog' ? 'Woof!' : 'Meow!';
+    }
+  };
+}
+
+
+function createCharacter(name, nickName, race, origin, attack, defense) {
+
+  return {
+    name, nickName, race, origin, attack, defense,
+    describe : function() {
+      return  `${this.name} is a ${this.race} from ${this.origin}`;
+    }
+  };
+}
+
+let Gandalf = createCharacter('Gandalf the White', 'gandalf', 'Wizard', 'Middle Earth' , 10, 6 );
+console.log(Gandalf.describe());
+
+let Bilbo = ('Bilbo Baggins',  'bilbo',  'Hobbit',  'The Shire',  2,  1)
+
+let Frodo = ('Frodo Baggins',  'frodo',  'Hobbit',  'The Shire',  3,  2)
+
+let Aragorn = ('Aragorn son of Arathorn'   ,  'aragorn',  'Man',  'Dunnedain',  6,  8)
+
+let Legolas = ('Legolas',  'legolas',  'Elf',  'Woodland Realm' ,  8,  5)
